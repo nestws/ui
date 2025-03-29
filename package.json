@@ -1,0 +1,14 @@
+{
+  "name": "@nestws/ui",
+  "description": "Nest Works Studio - UI",
+  "homepage": "https://www.nestws.com",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nestws/ui.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "license": "MIT"
+}
