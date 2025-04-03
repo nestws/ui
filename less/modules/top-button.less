@@ -1,0 +1,44 @@
+/* top button */
+
+@import (reference) '../core/globals.less';
+@import (reference) '../core/mixins.less';
+
+@top-button-size:                       @btn-default;
+@top-button-z-index:                    7;
+
+@top-button-hover-icon-slide:           -3px;
+
+@top-button-position-r:                 15px;
+@top-button-position-b:                 15px;
+
+@top-button-slide-pos:                  right; // right, bottom
+
+& when (@referenceCompiling = false) { // not compiled when reference importing
+
+    .ui-top-button {
+        text-align: center; width: @top-button-size; height: @top-button-size; ._bg-var(btn-bg); display: none; border: 0; position: fixed; right: @top-button-position-r; bottom: @top-button-position-b; z-index: @top-button-z-index; opacity: 0; cursor: pointer;
+
+        & when (@top-button-slide-pos = right) { transform: translateX((@top-button-size + (@top-button-position-r * 2))); }
+        & when (@top-button-slide-pos = bottom) { transform: translateY((@top-button-size + (@top-button-position-b * 2))); }
+
+        &.ui-round { border-radius: (@round - (@round * 0.3333333333)); }
+        &.ui-open {
+            display: block;
+
+            &-ease { opacity: 1; transform: translateX(0); }
+        }
+
+        .ui-icon { ._color-var(black); }
+
+        .ui-desktop & {
+            &:hover {
+                .ui-icon { transform: translateY(@top-button-hover-icon-slide); }
+            }
+        }
+    }
+
+    @media (max-width: @layout-min) {
+        .ui-top-button { display: none !important; }
+    }
+
+}

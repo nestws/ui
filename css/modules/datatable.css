@@ -1,0 +1,56 @@
+/* datatable */
+[data-ui-mode="light"] {
+  --ui-datatable-stripe-bg: hsla(0, 0%, 0%, 0.035);
+  --ui-datatable-hover-bg: hsla(0, 0%, 0%, 0.06);
+  --ui-datatable-border: hsl(0, 0%, 86.7%);
+}
+[data-ui-mode="dark"] {
+  --ui-datatable-stripe-bg: hsla(0, 0%, 100%, 0.035);
+  --ui-datatable-hover-bg: hsla(0, 0%, 100%, 0.06);
+  --ui-datatable-border: hsl(220, 8%, 28%);
+}
+.ui-ease-datatable .ui-datatable-content {
+  transition-property: background-color;
+  transition-duration: 0.15s;
+}
+.ui-datatable-content:not([class*="ui-col-"]) {
+  padding: 10px;
+  border-bottom: solid 1px var(--ui-datatable-border);
+}
+.ui-datatable-content:before,
+.ui-datatable-content:after {
+  content: "";
+  display: table;
+}
+.ui-datatable-content:after {
+  clear: both;
+}
+.ui-datatable-content.ui-even {
+  background-color: var(--ui-datatable-stripe-bg);
+}
+.ui-datatable-content.ui-checked {
+  background-color: hsla(42, 100%, 45%, 0.15) !important;
+}
+.ui-datatable > .ui-row,
+.ui-datatable .ui-datatable-content > .ui-row {
+  margin-left: unset;
+  margin-right: unset;
+}
+.ui-datatable:not(.ui-datatable-showed-all) .ui-datatable-content:not(.ui-showed) {
+  display: none;
+}
+.ui-datatable.ui-datatable-showed-all.ui-datatable-filtered .ui-datatable-content:not(.ui-filtered) {
+  display: none;
+}
+.ui-datatable.ui-datatable-hover .ui-datatable-content.ui-even:not([class*="ui-fill-"]) {
+  background-color: var(--ui-datatable-stripe-bg);
+}
+.ui-desktop .ui-datatable.ui-datatable-hover .ui-datatable-content:not([class*="ui-fill-"]):hover,
+.ui-desktop .ui-datatable.ui-datatable-hover .ui-datatable-content:not([class*="ui-fill-"]):nth-child(odd):hover {
+  background-color: var(--ui-datatable-hover-bg);
+}
+.ui-datatable .ui-datatable-paging button:not(.ui-btn) {
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}

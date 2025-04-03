@@ -1,0 +1,100 @@
+/* photoslide */
+[data-ui-mode="light"] {
+  --ui-photoslide-dot-bg: hsla(0, 0%, 0%, 0.4);
+  --ui-photoslide-dot-selected-bg: hsla(0, 0%, 0%, 0.65);
+}
+[data-ui-mode="dark"] {
+  --ui-photoslide-dot-bg: hsla(0, 0%, 100%, 0.4);
+  --ui-photoslide-dot-selected-bg: hsla(0, 0%, 100%, 0.65);
+}
+@keyframes ui-photoslide-loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ui-photoslide {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+.ui-photoslide:not(.ui-loaded) {
+  background-color: var(--ui-body-bg);
+}
+.ui-card .ui-photoslide:not(.ui-loaded) {
+  background-color: var(--ui-card-bg);
+}
+.ui-photoslide:not(.ui-loaded) .ui-photoslide-loader {
+  opacity: 0.45;
+  animation: ui-photoslide-loader 1.15s linear infinite;
+}
+.ui-photoslide:not(.ui-loaded) img {
+  opacity: 0;
+}
+.ui-photoslide-loader {
+  width: 42px;
+  height: 42px;
+  margin: -21px 0 0 -21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+}
+.ui-photoslide img {
+  vertical-align: middle;
+  width: 100%;
+  display: inline-block;
+  border: 0;
+  position: relative;
+  z-index: 2;
+}
+.ui-photoslide-prev,
+.ui-photoslide-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+.ui-photoslide-prev:not(.ui-show),
+.ui-photoslide-next:not(.ui-show) {
+  display: none;
+}
+.ui-photoslide-prev {
+  left: 0;
+}
+.ui-photoslide-next {
+  right: 0;
+}
+.ui-photoslide .ui-photoslide-nav {
+  white-space: nowrap;
+  text-align: center;
+  line-height: 7px;
+  padding: 6px 6px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 3;
+  cursor: default;
+  transform: translateX(-50%);
+}
+.ui-photoslide .ui-photoslide-nav:not(.ui-show) {
+  display: none;
+}
+.ui-photoslide .ui-photoslide-nav i {
+  width: 7px;
+  height: 7px;
+  background-color: var(--ui-photoslide-dot-bg);
+  margin: 0 3px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.ui-photoslide .ui-photoslide-nav i.ui-selected {
+  background-color: var(--ui-photoslide-dot-selected-bg);
+  transform: scale(1.5);
+}

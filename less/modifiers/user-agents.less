@@ -1,0 +1,24 @@
+/* user agents */
+
+@import (reference) '../core/globals.less';
+@import (reference) '../core/mixins.less';
+
+& when (@referenceCompiling = false) { // not compiled when reference importing
+
+    .ui-mobile {
+        * { -webkit-tap-highlight-color: @no-color; }
+    }
+
+    .ui-ios { -webkit-text-size-adjust: 100%; }
+
+    .ui-ie {
+        .ui-hidden-ie { display: none !important; }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+        .ui-mac.ui-chrome {
+            body { backface-visibility: hidden; perspective: 1000; } // chrome high pixel ratio display fix
+        }
+    }
+
+}

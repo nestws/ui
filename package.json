@@ -1,14 +1,39 @@
 {
   "name": "@nestws/ui",
   "description": "Nest Works Studio - UI",
-  "homepage": "https://www.nestws.com",
-  "version": "1.0.0",
+  "homepage": "https://github.com/nestws/ui/#readme",
+  "version": "1.0.1",
+  "main": "js/ui.js",
+  "style": "css/ui.css",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nestws/ui.git"
+    "url": "git+https://github.com/nestws/ui.git"
   },
   "keywords": [
-    "ui"
+    "react",
+    "ui",
+    "responsive",
+    "design system",
+    "ui examples",
+    "web",
+    "css",
+    "javascript",
+    "nestws ui",
+    "nest works studio"
   ],
-  "license": "MIT"
+  "files": [
+    "components",
+    "css",
+    "js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "typescript": "^5.7.3"
+  }
 }

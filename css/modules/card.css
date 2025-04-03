@@ -1,0 +1,93 @@
+/* cards */
+.ui-card,
+[class*="ui-card-"]:not(.ui-card-side):not(.ui-card-close) {
+  display: block;
+  position: relative;
+}
+.ui-card:not([class*="ui-fill-"]),
+[class*="ui-card-"]:not(.ui-card-side):not(.ui-card-close):not([class*="ui-fill-"]) {
+  background-color: var(--ui-card-bg);
+}
+.ui-card:not(:last-child),
+[class*="ui-card-"]:not(.ui-card-side):not(.ui-card-close):not(:last-child) {
+  margin-bottom: 20px;
+}
+[class*="ui-card-"]:not(.ui-card-side):not(.ui-card-close) {
+  border-left-style: solid;
+  border-left-width: 5px;
+}
+[class*="ui-card-"]:not(.ui-card-side):not(.ui-card-close).ui-round {
+  border-radius: 0 10px 10px 0;
+}
+[class*="ui-card-"]:not(.ui-card-side):not(.ui-card-close) > .ui-row {
+  margin-left: unset;
+  margin-right: unset;
+}
+.ui-card:before,
+.ui-card-side:before,
+.ui-card:after,
+.ui-card-side:after {
+  content: "";
+  display: table;
+}
+.ui-card:after,
+.ui-card-side:after {
+  clear: both;
+}
+.ui-card > .ui-row,
+.ui-card-side > .ui-row {
+  margin-left: unset;
+  margin-right: unset;
+}
+.ui-round > .ui-card-side:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.ui-round > .ui-card-side:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.ui-card.ui-round-side:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.ui-card.ui-round-side:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.ui-card-close {
+  color: var(--ui-black);
+  line-height: 12px;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+  opacity: 0.45;
+  cursor: pointer;
+}
+.ui-card-close .ui-icon {
+  width: 12px;
+  height: 12px;
+}
+.ui-desktop .ui-card-close:hover {
+  opacity: 0.75;
+}
+.ui-card-close-wait {
+  transform: scale(0.94, 0.98);
+  opacity: 0;
+}
+.ui-card-info {
+  border-color: hsl(220, 8%, 65%);
+}
+.ui-card-success {
+  border-color: hsl(142, 82%, 42%);
+}
+.ui-card-warning {
+  border-color: hsl(42, 100%, 45%);
+}
+.ui-card-danger {
+  border-color: hsl(30, 100%, 50%);
+}
+@media (max-width: 767px) {
+  [class*="ui-card-"]:not(.ui-card-side) > p {
+    text-align: center;
+  }
+}

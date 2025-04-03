@@ -1,0 +1,73 @@
+/* sidebar */
+.ui-sidebar {
+  width: 100%;
+  width: 320px;
+  background-color: var(--ui-body-bg);
+  position: fixed;
+  top: 10px;
+  bottom: 10px;
+  z-index: 90;
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.15);
+}
+.ui-sidebar-opened,
+.ui-sidebar-opened > body {
+  overflow: hidden;
+}
+.ui-sidebar.ui-round {
+  overflow: hidden;
+}
+.ui-sidebar-bg {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.65);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 89;
+}
+.ui-sidebar-bg:not(.ui-open) {
+  display: none;
+}
+.ui-sidebar-bg:not(.ui-open-ease) {
+  opacity: 0;
+}
+.ui-sidebar-r {
+  right: 10px;
+  transform: translateX(100%);
+}
+.ui-sidebar-l {
+  left: 10px;
+  transform: translateX(-100%);
+}
+.ui-sidebar:not(.ui-open) {
+  display: none;
+}
+.ui-sidebar.ui-open-ease {
+  transform: translateX(0);
+}
+.ui-sidebar-close {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+.ui-sidebar-title {
+  height: 72px;
+  padding: 15px 78px 15px 15px;
+  position: relative;
+  z-index: 1;
+}
+.ui-sidebar-title + .ui-sidebar-content {
+  top: 72px;
+}
+.ui-sidebar-content {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

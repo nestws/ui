@@ -1,0 +1,142 @@
+/* icons */
+.ui-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  display: inline-block;
+  fill: currentColor;
+  stroke: none;
+}
+.ui-icons-no-opacity .ui-icon:not(.ui-opacity-half) {
+  opacity: 1 !important;
+}
+.ui-icons-m-1-l .ui-icon {
+  margin-left: 1px !important;
+}
+.ui-icons-m-1-r .ui-icon {
+  margin-right: 1px !important;
+}
+.ui-icons-m-1-v .ui-icon {
+  margin-top: 1px !important;
+  margin-bottom: 1px !important;
+}
+.ui-icons-m-1-h .ui-icon {
+  margin-right: 1px !important;
+  margin-left: 1px !important;
+}
+.ui-icons-m-2-l .ui-icon {
+  margin-left: 2px !important;
+}
+.ui-icons-m-2-r .ui-icon {
+  margin-right: 2px !important;
+}
+.ui-icons-m-2-v .ui-icon {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+.ui-icons-m-2-h .ui-icon {
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+}
+.ui-icons-m-3-l .ui-icon {
+  margin-left: 3px !important;
+}
+.ui-icons-m-3-r .ui-icon {
+  margin-right: 3px !important;
+}
+.ui-icons-m-3-v .ui-icon {
+  margin-top: 3px !important;
+  margin-bottom: 3px !important;
+}
+.ui-icons-m-3-h .ui-icon {
+  margin-right: 3px !important;
+  margin-left: 3px !important;
+}
+.ui-icons-m-4-l .ui-icon {
+  margin-left: 4px !important;
+}
+.ui-icons-m-4-r .ui-icon {
+  margin-right: 4px !important;
+}
+.ui-icons-m-4-v .ui-icon {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+.ui-icons-m-4-h .ui-icon {
+  margin-right: 4px !important;
+  margin-left: 4px !important;
+}
+.ui-icons-m-5-l .ui-icon {
+  margin-left: 5px !important;
+}
+.ui-icons-m-5-r .ui-icon {
+  margin-right: 5px !important;
+}
+.ui-icons-m-5-v .ui-icon {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+.ui-icons-m-5-h .ui-icon {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+.ui-icons-m-10-l .ui-icon {
+  margin-left: 10px !important;
+}
+.ui-icons-m-10-r .ui-icon {
+  margin-right: 10px !important;
+}
+.ui-icons-m-10-v .ui-icon {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.ui-icons-m-10-h .ui-icon {
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+.ui-icons-xxl .ui-icon:not([class*="ui-icon-"]) {
+  width: 50px !important;
+  height: 50px !important;
+}
+.ui-icons-xl .ui-icon:not([class*="ui-icon-"]) {
+  width: 34px !important;
+  height: 34px !important;
+}
+.ui-icons-lg .ui-icon:not([class*="ui-icon-"]) {
+  width: 26px !important;
+  height: 26px !important;
+}
+.ui-icons-sm .ui-icon:not([class*="ui-icon-"]) {
+  width: 18px !important;
+  height: 18px !important;
+}
+.ui-icons-xs .ui-icon:not([class*="ui-icon-"]) {
+  width: 14px !important;
+  height: 14px !important;
+}
+.ui-icon-mirror-v {
+  transform: scaleY(-1);
+}
+.ui-icon-mirror-h {
+  transform: scaleX(-1);
+}
+.ui-icon-xxl {
+  width: 50px !important;
+  height: 50px !important;
+}
+.ui-icon-xl {
+  width: 34px !important;
+  height: 34px !important;
+}
+.ui-icon-lg {
+  width: 26px !important;
+  height: 26px !important;
+}
+.ui-icon-sm {
+  width: 18px !important;
+  height: 18px !important;
+}
+.ui-icon-xs {
+  width: 14px !important;
+  height: 14px !important;
+}

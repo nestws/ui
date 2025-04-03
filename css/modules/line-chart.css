@@ -1,0 +1,172 @@
+/* line chart */
+[data-ui-mode="light"] {
+  --ui-line-chart-info-selected-bg: hsla(0, 0%, 0%, 0.08);
+}
+[data-ui-mode="dark"] {
+  --ui-line-chart-info-selected-bg: hsla(0, 0%, 100%, 0.14);
+}
+@keyframes ui-line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ui-line-dashed-dotted {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ui-line-filled {
+  to {
+    transform: translateY(0);
+    opacity: 0.15;
+  }
+}
+@keyframes ui-line-circles {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.ui-ease-line-chart circle {
+  transition-property: stroke-width;
+  transition-duration: 0.15s;
+}
+.ui-ease-line-chart li {
+  transition-property: background-color;
+  transition-duration: 0.15s;
+}
+.ui-line-chart-holder {
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.ui-line-chart-holder .ui-line-chart {
+  display: none !important;
+}
+.ui-line-chart-holder .ui-line-chart-info {
+  list-style: none;
+  text-align: center;
+  display: block;
+}
+.ui-line-chart-holder .ui-line-chart-info li {
+  color: hsl(0, 0%, 100%);
+  font-size: 13px;
+  height: 19px;
+  padding: 0 6px;
+  margin: 0 2px 1px 2px;
+  display: inline-block;
+  border-radius: 1000px;
+}
+.ui-line-chart-holder .ui-line-chart-info li.ui-toggle {
+  cursor: pointer;
+}
+.ui-line-chart-holder .ui-line-chart-info li.ui-toggle:not(.ui-selected) {
+  color: var(--ui-black);
+  background-color: var(--ui-line-chart-info-selected-bg) !important;
+}
+.ui-line-chart-holder svg {
+  width: 100%;
+}
+.ui-line-chart-holder svg g {
+  display: block;
+}
+.ui-line-chart-holder svg path {
+  stroke-linecap: round;
+}
+.ui-line-chart-holder svg path:not(.ui-dashed):not(.ui-dotted):not(.ui-filled) {
+  stroke-dashoffset: 3000;
+  stroke-dasharray: 3000;
+}
+.ui-line-chart-holder svg path:not([fill]) {
+  fill: transparent;
+}
+.ui-line-chart-holder svg path.ui-dashed {
+  stroke-dasharray: 10 5;
+}
+.ui-line-chart-holder svg path.ui-dotted {
+  stroke-dasharray: 1 5;
+}
+.ui-no-effects .ui-line-chart-holder svg path:not(.ui-dashed):not(.ui-dotted):not(.ui-filled),
+.ui-ie .ui-line-chart-holder svg path:not(.ui-dashed):not(.ui-dotted):not(.ui-filled) {
+  stroke-dashoffset: 0;
+}
+.ui-no-effects .ui-line-chart-holder svg path.ui-dashed,
+.ui-ie .ui-line-chart-holder svg path.ui-dashed,
+.ui-no-effects .ui-line-chart-holder svg path.ui-dotted,
+.ui-ie .ui-line-chart-holder svg path.ui-dotted {
+  opacity: 1;
+}
+.ui-no-effects .ui-line-chart-holder svg path.ui-filled,
+.ui-ie .ui-line-chart-holder svg path.ui-filled {
+  transform: translateY(0);
+  opacity: 0.15;
+}
+.ui-line-chart-holder svg line {
+  stroke: currentColor;
+}
+html:not(.ui-firefox) .ui-line-chart-holder svg line {
+  shape-rendering: crispEdges;
+}
+.ui-line-chart-holder svg line.ui-line-root-grid {
+  opacity: 0.35;
+}
+.ui-line-chart-holder svg line:not(.ui-line-root-grid) {
+  stroke-width: 1;
+  opacity: 0.12;
+}
+.ui-line-chart-holder svg circle[onclick] {
+  cursor: pointer;
+}
+.ui-desktop .ui-line-chart-holder svg circle:hover {
+  stroke-width: 4;
+}
+.ui-no-effects .ui-line-chart-holder svg circle,
+.ui-ie .ui-line-chart-holder svg circle {
+  transform: translateY(0);
+  opacity: 1;
+}
+.ui-line-chart-holder svg text {
+  fill: currentColor;
+  font-size: 11px;
+  opacity: 0.65;
+}
+.ui-line-chart-holder svg .ui-line-x-grid {
+  text-anchor: middle;
+}
+.ui-line-chart-holder svg .ui-line-y-grid {
+  text-anchor: end;
+}
+.ui-line-chart-holder.ui-resized svg path:not(.ui-dashed):not(.ui-dotted) {
+  stroke-dashoffset: 1;
+  stroke-dasharray: 1;
+}
+.ui-line-chart-holder.ui-resized svg path.ui-filled {
+  opacity: 0.15;
+}
+html:not(.ui-ie) .ui-line-chart-holder:not(.ui-resized) svg path.ui-dashed,
+html:not(.ui-ie) .ui-line-chart-holder:not(.ui-resized) svg path.ui-dotted {
+  stroke-dashoffset: 0;
+  opacity: 0;
+}
+html:not(.ui-ie) .ui-line-chart-holder:not(.ui-resized) svg path.ui-filled {
+  transform: translateY(15px);
+  opacity: 0;
+}
+html:not(.ui-ie) .ui-line-chart-holder:not(.ui-resized) svg circle {
+  transform: translateY(30px);
+  opacity: 0;
+}
+html:not(.ui-ie) .ui-line-chart-holder.ui-loaded svg path:not(.ui-dashed):not(.ui-dotted):not(.ui-filled) {
+  animation: ui-line-draw 2s 0.6s ease-in forwards;
+}
+html:not(.ui-ie) .ui-line-chart-holder.ui-loaded svg path.ui-dashed,
+html:not(.ui-ie) .ui-line-chart-holder.ui-loaded svg path.ui-dotted {
+  animation: ui-line-dashed-dotted 1s 0.6s ease-in forwards;
+}
+html:not(.ui-ie) .ui-line-chart-holder.ui-loaded svg path.ui-filled {
+  animation: ui-line-filled 0.6s forwards;
+}
+html:not(.ui-ie) .ui-line-chart-holder.ui-loaded svg circle {
+  animation: ui-line-circles 0.6s forwards;
+}

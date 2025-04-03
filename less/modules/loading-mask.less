@@ -1,0 +1,71 @@
+/* loading mask */
+
+@import (reference) '../core/globals.less';
+@import (reference) '../core/mixins.less';
+
+._global-vars () {
+	--ui-loading-mask-bg: @loading-mask-bg;
+}
+._global-vars-dark () {
+	--ui-loading-mask-bg: @loading-mask-bg-dark;
+}
+
+& when (@dark-mode = true) {
+	& when (@dark-mode-auto-switcher = true) {
+		@media (prefers-color-scheme: light) {
+			:root { ._global-vars(); }
+		}
+		@media (prefers-color-scheme: dark) {
+			:root { ._global-vars-dark(); }
+		}
+	}
+	& when (@dark-mode-auto-switcher = false) {
+		[data-ui-mode="light"] { ._global-vars(); }
+		[data-ui-mode="dark"] { ._global-vars-dark(); }
+	}
+}
+
+@loading-mask-bg:                             fade(@black, 12%);
+@loading-mask-bg-dark:                        fade(@white, 10%);
+
+@loading-mask-loader-z-index:                 18;
+
+@loading-mask-svg-min-size:                   24px;
+@loading-mask-svg-max-size:                   56px;
+
+@loading-mask-svg-opacity:                    0.86;
+@loading-mask-svg-opacity-dark:               0.42;
+
+& when (@referenceCompiling = false) { // not compiled when reference importing
+
+    .ui-loading {
+        &-mask {
+            overflow: hidden !important; position: relative !important; cursor: default !important;
+
+            &-loader {
+                height: 100%; ._bg-var(loading-mask-bg); position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: @loading-mask-loader-z-index;
+
+                &:not(.ui-open) { display: none; }
+                &:not(.ui-open-ease) { opacity: 0; }
+
+                span {
+                    display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+
+                    svg { min-height: @loading-mask-svg-min-size !important; max-height: @loading-mask-svg-max-size !important; display: block; fill: currentColor; }
+                }
+            }
+
+            &-sticky {
+                & > .ui-loading-mask-loader { position: fixed; }
+            }
+
+            &[class*="ui-fill-dark"] {
+                svg { opacity: @loading-mask-svg-opacity; }
+            }
+            &:not([class*="ui-fill-dark"]) {
+                svg { opacity: @loading-mask-svg-opacity; }
+            }
+        }
+    }
+
+}

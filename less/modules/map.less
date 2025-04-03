@@ -1,0 +1,48 @@
+/* map */
+
+@import (reference) '../core/globals.less';
+@import (reference) '../core/mixins.less';
+
+@map-height-for-ie:                     360px;
+@map-inner-stroke-width:                1;
+
+@map-path-opacity:                      .25;
+@map-path-opacity-hover:                1;
+
+& when (@referenceCompiling = false) { // not compiled when reference importing
+
+    .ui-map {
+        position: relative;
+
+        svg {
+            width: 100%; height: auto; margin-right: auto; margin-left: auto; display: block;
+
+            html:not(.ui-ie) & { height: auto; }
+            .ui-ie & { height: @map-height-for-ie; }
+
+            path {
+                stroke-width: @map-inner-stroke-width;
+
+                &:not([fill]) {
+                    fill: currentColor; opacity: @map-path-opacity;
+
+                    &:hover { opacity: @map-path-opacity-hover; }
+                }
+                &:not([stroke]) {
+                    ._stroke-var(body-bg);
+
+                    .ui-card & { ._stroke-var(card-bg); }
+                }
+
+                &.ui-active {
+                    &:not([fill]) { fill: currentColor; }
+                    &:hover { opacity: 1 !important; }
+                }
+
+                &[data-ui-href] { cursor: pointer; }
+            }
+
+        }
+    }
+
+}

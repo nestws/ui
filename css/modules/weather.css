@@ -1,0 +1,355 @@
+/* weather */
+.ui-ease-weather .ui-graphs {
+  transition-property: background-color;
+  transition-duration: 0.15s;
+}
+.ui-ease-weather .ui-graphs,
+.ui-ease-weather .ui-graphs > div {
+  transition-duration: 0.8s;
+}
+.ui-ease-weather .ui-graphs > div {
+  transition-property: left;
+}
+.ui-weather {
+  position: relative;
+}
+.ui-weather:before,
+.ui-weather:after,
+.ui-weather .ui-days:before,
+.ui-weather .ui-days:after {
+  content: "";
+  display: table;
+}
+.ui-weather:after,
+.ui-weather .ui-days:after {
+  clear: both;
+}
+.ui-weather .ui-reports {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.ui-weather .ui-now,
+.ui-weather .ui-days,
+.ui-weather .ui-now a,
+.ui-weather .ui-days a {
+  color: hsl(0, 0%, 0%);
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.ui-weather .ui-now {
+  text-align: center;
+  padding: 60px 15px 30px 15px;
+}
+.ui-weather .ui-now > span {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: normal;
+  display: block;
+}
+.ui-weather .ui-days {
+  white-space: nowrap;
+  list-style: none;
+  padding: 0 0 15px 0;
+  margin: 0 15px 15px 15px;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+.ui-mobile .ui-weather .ui-days {
+  -webkit-overflow-scrolling: touch;
+}
+.ui-weather .ui-days li {
+  text-align: center;
+  width: 20.65%;
+  display: inline-block;
+}
+.ui-weather .ui-days li .ui-icon {
+  margin: 15px auto;
+  display: block;
+}
+.ui-weather .ui-days li > span {
+  font-size: 14px;
+  line-height: 14px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.85;
+}
+.ui-weather .ui-days li span:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: block;
+  border: solid 1px currentColor;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+}
+@keyframes ui-clock {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ui-weather .ui-w-degree {
+  font-size: 72px;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 60px;
+  margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
+}
+.ui-weather .ui-w-degree:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: solid 2px currentColor;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+.ui-weather .ui-w-date {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+  display: block;
+  opacity: 0.65;
+}
+.ui-weather .ui-w-clock > span:first-child:after {
+  content: ":";
+  animation: ui-clock 2s linear infinite;
+}
+.ui-weather .ui-clear {
+  width: 178px;
+  height: 178px;
+  background: no-repeat;
+  margin: -39px 0 0 -89px;
+  left: 0;
+}
+@keyframes ui-shooting {
+  0% {
+    transform: translate(-100%, -35%);
+  }
+  4% {
+    opacity: 1;
+  }
+  7% {
+    opacity: 0;
+  }
+  10% {
+    transform: translate(100%, 65%);
+  }
+  100% {
+    transform: translate(100%, 35%);
+  }
+}
+.ui-weather .ui-shooting-star {
+  width: 335px;
+  height: 115px;
+  background: no-repeat top center;
+  top: 30px;
+  right: 0;
+  opacity: 0.65;
+  animation: ui-shooting 6s linear infinite;
+}
+.ui-weather .ui-stars {
+  width: 100%;
+  height: 100%;
+  background: no-repeat top center;
+  top: 0;
+  left: 0;
+}
+@keyframes ui-cloud {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1486px);
+  }
+}
+.ui-weather .ui-cloud,
+.ui-weather .ui-cloud-heavy {
+  width: 2972px;
+  height: 100%;
+  background: repeat-x;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.8;
+  animation: ui-cloud 220s linear infinite;
+}
+@keyframes ui-fog {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1248px);
+  }
+}
+.ui-weather .ui-fog {
+  width: 2496px;
+  height: 100%;
+  background: repeat-x;
+  bottom: 0;
+  left: 0;
+  animation: ui-fog 220s linear infinite;
+}
+@keyframes ui-rain {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.ui-weather .ui-rain {
+  animation: ui-rain 6s linear infinite;
+}
+.ui-weather .ui-rain,
+.ui-weather .ui-rain-heavy {
+  width: 100%;
+  height: 1000px;
+  background: no-repeat top center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8;
+}
+.ui-weather .ui-rain-heavy {
+  animation: ui-rain 4s linear infinite;
+}
+@keyframes ui-bolt {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 0.45;
+  }
+  12% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.ui-weather .ui-bolt {
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 100%, 0.15) no-repeat top center;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0.45;
+  animation: ui-bolt 10s linear infinite;
+}
+@keyframes ui-snow {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.ui-weather .ui-snow {
+  width: 100%;
+  height: 1000px;
+  background: no-repeat top center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.8;
+  animation: ui-snow 40s linear infinite;
+}
+.ui-weather .ui-graphs {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.ui-weather .ui-graphs[data-ui-graphs*="clear"] {
+  background-image: linear-gradient(hsl(0, 100%, 89%), hsl(224, 95%, 92%));
+}
+.ui-weather .ui-graphs[data-ui-graphs*="cloud"] {
+  background-image: linear-gradient(hsl(209, 100%, 86%), hsl(224, 95%, 92%));
+}
+.ui-weather .ui-graphs[data-ui-graphs*="fog"] {
+  background-image: linear-gradient(hsl(228, 97%, 86%), hsl(224, 95%, 92%));
+}
+.ui-weather .ui-graphs[data-ui-graphs*="rain"],
+.ui-weather .ui-graphs[data-ui-graphs*="bolt"] {
+  background-image: linear-gradient(hsl(266, 100%, 88%), hsl(224, 95%, 92%));
+}
+.ui-weather .ui-graphs[data-ui-graphs*="snow"] {
+  background-image: linear-gradient(hsl(201, 78%, 72%), hsl(224, 95%, 92%));
+}
+.ui-weather .ui-graphs > div {
+  position: absolute;
+}
+.ui-weather.ui-round .ui-graphs {
+  border-radius: 10px;
+}
+.ui-weather.ui-night .ui-now,
+.ui-weather.ui-night .ui-days,
+.ui-weather.ui-night .ui-now a,
+.ui-weather.ui-night .ui-days a,
+.ui-weather.ui-night .ui-now .ui-icons,
+.ui-weather.ui-night .ui-days .ui-icons {
+  color: hsl(0, 0%, 100%);
+}
+.ui-weather.ui-night .ui-graphs {
+  background-image: linear-gradient(hsl(226, 45%, 28%), hsl(221, 36%, 65%)) !important;
+}
+.ui-weather.ui-night .ui-clear {
+  top: 60px;
+  left: 80%;
+  z-index: 1;
+  transform: scale(0.35);
+}
+.ui-weather.ui-night .ui-cloud,
+.ui-weather.ui-night .ui-cloud-heavy {
+  opacity: 0.3;
+}
+.ui-weather.ui-night .ui-fog {
+  opacity: 0.3;
+}
+.ui-weather.ui-night .ui-rain,
+.ui-weather.ui-night .ui-rain-heavy {
+  opacity: 0.45;
+}
+.ui-weather.ui-night .ui-snow {
+  opacity: 0.65;
+}
+.ui-weather:not(.ui-night) .ui-clear {
+  top: 15px;
+  opacity: 0.85;
+}
+.ui-weather:not(.ui-night) .ui-graphs .ui-stars,
+.ui-weather:not(.ui-night) .ui-graphs .ui-shooting-star {
+  display: none;
+}

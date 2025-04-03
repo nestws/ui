@@ -1,0 +1,47 @@
+@import (reference) 'globals.less';
+
+// color mixins
+._color-var (@var) when (@dark-mode = true) {
+    color: ~'var(--ui-@{var})';
+}
+._bg-var (@var) when (@dark-mode = true) {
+    background-color: ~'var(--ui-@{var})';
+}
+._gradient-var (@var) when (@dark-mode = true) {
+    background-image: ~'var(--ui-@{var})';
+}
+._border-color-var (@var: border-color) when (@dark-mode = true) {
+    border-color: ~'var(--ui-@{var})';
+}
+._border-var (@dir: border; @style: solid; @width: 1px; @var: border-color) when (@dark-mode = true) {
+    @{dir}: @style @width ~'var(--ui-@{var})';
+}
+._shadow-var (@h: 0; @v: 0; @blur: 0; @spread: 0; @var: border-color) when (@dark-mode = true) {
+    box-shadow: @h @v @blur @spread ~'var(--ui-@{var})';
+}
+._fill-var (@var) when (@dark-mode = true) {
+    fill: ~'var(--ui-@{var})';
+}
+._stroke-var (@var) when (@dark-mode = true) {
+    stroke: ~'var(--ui-@{var})';
+}
+
+// font mixins
+._font-scale (@size) when (@large-fonts-scaling = false) {
+    font-size: @size;
+}
+._font-scale (@size) when (@large-fonts-scaling = true) {
+    @unit: (@size / 4);
+    @scale: unit(@unit);
+
+    @number: round(@scale);
+    @viewport: ~'@{number}vw';
+
+    font-size: @size; // fallback
+    font-size: clamp((@size / 2), @size, @viewport); // clamp(min, val, max)
+}
+
+// icon mixins
+._icon(@size) {
+    width: @size; height: @size;
+}
