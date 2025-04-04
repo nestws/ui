@@ -7,11 +7,16 @@ Nestws UI is a typescript project with supported by Webpack.
 ```
 npm init -y
 ```
-### 2. Install nestws ui:
+### 2. Create .gitignore file in root and paste this lines before install:
+```
+node_modules
+package-lock.json
+```
+### 3. Install nestws ui:
 ```
 npm i @nestws/ui
 ```
-### 3. Create tsconfig.json file in root and paste this configs:
+### 4. Create tsconfig.json file in root and paste this configs:
 ```
 {
   "compilerOptions": {
@@ -25,7 +30,7 @@ npm i @nestws/ui
     }
 }
 ```
-### 4. Create webpack.config.js file in root and paste this configs:
+### 5. Create webpack.config.js file in root and paste this configs:
 ```
 const path = require("path");
 const webpack = require('webpack');
@@ -140,8 +145,15 @@ module.exports = (env, argv) => {
 
 };
 ```
-### 5.1. Create empty src/ folder:
-### 5.2. Create an empty index.html file in src/ folder and paste:
+### 6. Add scripts to your package.json file:
+```
+"scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development"
+}
+```
+### 7.1. Create empty src/ folder:
+### 7.2. Create an empty index.html file in src/ folder and paste:
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +167,7 @@ module.exports = (env, argv) => {
 </body>
 </html>
 ```
-### 6. Create an empty index.js file in src/ folder and paste:
+### 8. Create an empty index.js file in src/ folder and paste:
 ```
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
@@ -172,7 +184,10 @@ root.render(
     </BrowserRouter>
 );
 ```
-### 7. Happy coding!
+### 9. Run this command to start your project and happy coding!
+```
+npm start
+```
 
 ## By Nest Works Studio
 [nestws.com](https://www.nestws.com)
