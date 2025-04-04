@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { AvatarProps } from './utils/Models.ts';
+import { AvatarProps } from './utils/Models';
 
 // assets
-import '../css/modules/avatars.css';
+import '../less/modules/avatars';
 
 export default function Avatar(props:AvatarProps) {
 

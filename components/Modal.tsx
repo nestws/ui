@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { ModalProps, ModalHeaderProps, ModalTitleProps, ModalButtonsProps, ModalContainerProps, ModalFooterProps, ModalOpenProps } from './utils/Models.ts';
+import { ModalProps, ModalHeaderProps, ModalTitleProps, ModalButtonsProps, ModalContainerProps, ModalFooterProps, ModalOpenProps } from './utils/Models';
 
 // assets
-import '../css/modules/modal.css';
-import '../js/modules/modal.js';
+import '../less/modules/modal';
+import '../js/modules/modal';
 
 let Modal = function (props:ModalProps) {
 

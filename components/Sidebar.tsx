@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 // utils
-import { SidebarProps, SidebarTitleProps, SidebarContentProps } from './utils/Models.ts';
+import { SidebarProps, SidebarTitleProps, SidebarContentProps } from './utils/Models';
 
 // assets
-import '../css/modules/sidebar.css';
-import '../js/modules/sidebar.js';
+import '../less/modules/sidebar';
+import '../js/modules/sidebar';
 
 const Sidebar = function (props:SidebarProps) {
 

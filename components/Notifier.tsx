@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { NotifierProps } from './utils/Models.ts';
+import { NotifierProps } from './utils/Models';
 
 // assets
-import '../css/modules/notifier.css';
+import '../less/modules/notifier';
 
 export default function Notifier(props:NotifierProps) {
 

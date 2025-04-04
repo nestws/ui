@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 // utils
-import { ButtonProps, ButtonWrapperProps } from './utils/Models.ts';
+import { ButtonProps, ButtonWrapperProps } from './utils/Models';
 
 // assets
-import '../css/modules/buttons.css';
+import '../less/modules/buttons';
 
 const Button = function (props:ButtonProps) {
 

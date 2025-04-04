@@ -1,11 +1,11 @@
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { AlertsDialogProps, AlertsMessageProps } from './utils/Models.ts';
+import { AlertsDialogProps, AlertsMessageProps } from './utils/Models';
 
 // assets
-import '../css/modules/alerts.css';
-import '../js/modules/alerts.js';
+import '../less/modules/alerts';
+import '../js/modules/alerts';
 
 const Alerts = function () {}
 

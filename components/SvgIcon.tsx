@@ -2,10 +2,10 @@ import * as React from 'react';
 import { createElement } from 'react';
 
 // utils
-import { SvgIconProps } from './utils/Models.ts';
+import { SvgIconProps } from './utils/Models';
 
 // assets
-import '../css/modules/icons.css';
+import '../less/modules/icons';
 
 export default function SvgIcon(props:SvgIconProps) {
 

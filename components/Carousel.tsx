@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { CarouselProps, CrouselSliderProps, CrouselContentProps, CrouselNavProps, CrouselDotsProps } from './utils/Models.ts';
+import { CarouselProps, CrouselSliderProps, CrouselContentProps, CrouselNavProps, CrouselDotsProps } from './utils/Models';
 
 // assets
-import '../css/modules/carousel.css';
-import '../js/modules/carousel.js';
+import '../less/modules/carousel';
+import '../js/modules/carousel';
 
 const Carousel = function (props:CarouselProps) {
 

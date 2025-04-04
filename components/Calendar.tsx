@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import Form from './Form.tsx';
-import SvgIcon from './SvgIcon.tsx';
+import Form from './Form';
+import SvgIcon from './SvgIcon';
 
-import { CalendarProps, CalendarPickerProps } from './utils/Models.ts';
+import { CalendarProps, CalendarPickerProps } from './utils/Models';
 
 // assets
-import '../css/modules/calendar.css';
-import '../js/modules/calendar.js';
+import '../less/modules/calendar';
+import '../js/modules/calendar';
 
 const Calendar = function (props:CalendarProps) {
 

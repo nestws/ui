@@ -1,8 +1,8 @@
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // assets
-import '../css/modules/loading-mask.css';
-import '../js/modules/loading-mask.js';
+import '../less/modules/loading-mask';
+import '../js/modules/loading-mask';
 
 export default function LoadingMask(toggle: any) {
     ui.loadingMask.toggle(toggle);

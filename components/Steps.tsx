@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { StepsProps, StepsItemProps } from './utils/Models.ts';
+import { StepsProps, StepsItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/steps.css';
+import '../less/modules/steps';
 
 const Steps = function (props:StepsProps) {
 

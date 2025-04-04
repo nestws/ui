@@ -2,10 +2,10 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 // utils
-import { BreadcrumbsProps, BreadcrumbsItemProps } from './utils/Models.ts';
+import { BreadcrumbsProps, BreadcrumbsItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/breadcrumbs.css';
+import '../less/modules/breadcrumbs';
 
 const Breadcrumbs = function (props:BreadcrumbsProps) {
 

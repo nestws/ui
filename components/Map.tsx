@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { MapProps } from './utils/Models.ts';
+import { MapProps } from './utils/Models';
 
 // assets
-import '../css/modules/map.css';
-import '../js/modules/map.js';
+import '../less/modules/map';
+import '../js/modules/map';
 
 export default function Map(props:MapProps) {
 

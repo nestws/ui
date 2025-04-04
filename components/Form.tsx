@@ -1,21 +1,21 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import Button from './Button.tsx';
-import SvgIcon from './SvgIcon.tsx';
-import { FormLabelProps, FormInputProps, FormFileProps, FormTextareaProps, FormSelectProps, FormCheckProps, FormRequiredMessageProps, FormHintProps } from './utils/Models.ts';
+import Button from './Button';
+import SvgIcon from './SvgIcon';
+import { FormLabelProps, FormInputProps, FormFileProps, FormTextareaProps, FormSelectProps, FormCheckProps, FormRequiredMessageProps, FormHintProps } from './utils/Models';
 
 // assets
-import '../css/modules/autocomplete.css';
-import '../css/modules/textarea-counter.css';
-import '../css/modules/forms.css';
+import '../less/modules/autocomplete';
+import '../less/modules/textarea-counter';
+import '../less/modules/forms';
 
-import '../js/modules/autocomplete.js';
-import '../js/modules/required-forms.js';
-import '../js/modules/textarea-counter.js';
-import '../js/modules/forms.js';
+import '../js/modules/autocomplete';
+import '../js/modules/required-forms';
+import '../js/modules/textarea-counter';
+import '../js/modules/forms';
 
 const Form = function () {}
 

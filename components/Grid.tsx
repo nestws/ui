@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { GridContainerProps, GridRowProps, GridColProps, GridStaticProps } from './utils/Models.ts';
+import { GridContainerProps, GridRowProps, GridColProps, GridStaticProps } from './utils/Models';
 
 // assets
-import '../css/modules/grid.css';
-import '../js/modules/grid.js';
+import '../less/modules/grid';
+import '../js/modules/grid';
 
 const Grid = function () {}
 

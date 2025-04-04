@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { DonutChartHolderProps, DonutChartItemProps } from './utils/Models.ts';
+import { DonutChartHolderProps, DonutChartItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/donut-chart.css';
-import '../js/modules/donut-chart.js';
+import '../less/modules/donut-chart';
+import '../js/modules/donut-chart';
 
 const DonutChart = function () {}
 

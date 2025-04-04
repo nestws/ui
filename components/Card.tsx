@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 // utils
-import { CardProps } from './utils/Models.ts';
+import { CardProps } from './utils/Models';
 
 // assets
-import '../css/modules/card.css';
-import '../js/modules/card.js';
+import '../less/modules/card';
+import '../js/modules/card';
 
 const Card = function (props:CardProps) {
 

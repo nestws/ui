@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { PieChartHolderProps, PieChartItemProps } from './utils/Models.ts';
+import { PieChartHolderProps, PieChartItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/pie-chart.css';
-import '../js/modules/pie-chart.js';
+import '../less/modules/pie-chart';
+import '../js/modules/pie-chart';
 
 const PieChart = function () {}
 

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { CurrencySpinnerProps, CurrencyFormProps } from './utils/Models.ts';
+import { CurrencySpinnerProps, CurrencyFormProps } from './utils/Models';
 
 // assets
-import '../js/modules/currency-spinner.js';
+import '../js/modules/currency-spinner';
 
 const Currency = function () {}
 

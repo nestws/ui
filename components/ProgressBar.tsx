@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { ProgressBarProps, ProgressBarItemProps } from './utils/Models.ts';
+import { ProgressBarProps, ProgressBarItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/progress-bar.css';
+import '../less/modules/progress-bar';
 
 const ProgressBar = function (props:ProgressBarProps) {
 

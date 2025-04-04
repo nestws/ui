@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect, Fragment } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { LineChartHolderProps, LineChartLineProps, LineChartItemsProps } from './utils/Models.ts';
+import { LineChartHolderProps, LineChartLineProps, LineChartItemsProps } from './utils/Models';
 
 // assets
-import '../css/modules/line-chart.css';
-import '../js/modules/line-chart.js';
+import '../less/modules/line-chart';
+import '../js/modules/line-chart';
 
 const LineChart = function () {}
 

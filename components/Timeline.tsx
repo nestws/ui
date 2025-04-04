@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { TimelineProps, TimelineItemProps } from './utils/Models.ts';
+import { TimelineProps, TimelineItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/timeline.css';
+import '../less/modules/timeline';
 
 const Timeline = function (props:TimelineProps) {
 

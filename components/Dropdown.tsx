@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 // utils
-import { DropdownProps, DropdownMenuProps, DropdownItemProps } from './utils/Models.ts';
+import { DropdownProps, DropdownMenuProps, DropdownItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/dropdown.css';
-import '../js/modules/dropdown.js';
+import '../less/modules/dropdown';
+import '../js/modules/dropdown';
 
 const Dropdown = function (props:DropdownProps) {
 

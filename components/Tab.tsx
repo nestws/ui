@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 // utils
-import { TabHolderProps, TabContentProps } from './utils/Models.ts';
+import { TabHolderProps, TabContentProps } from './utils/Models';
 
 // assets
-import '../css/modules/tab.css';
-import '../js/modules/tab.js';
+import '../less/modules/tab';
+import '../js/modules/tab';
 
 const Tab = function () {}
 

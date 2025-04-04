@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { TableProps, TableScrollProps, TableFluidProps } from './utils/Models.ts';
+import { TableProps, TableScrollProps, TableFluidProps } from './utils/Models';
 
 // assets
-import '../css/modules/tables.css';
+import '../less/modules/tables';
 
 const Table = function (props:TableProps) {
 

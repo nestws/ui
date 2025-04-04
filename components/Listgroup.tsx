@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 // utils
-import { ListgroupProps, ListgroupListProps, ListgroupItemProps } from './utils/Models.ts';
+import { ListgroupProps, ListgroupListProps, ListgroupItemProps } from './utils/Models';
 
 // assets
-import '../css/modules/listgroup.css';
+import '../less/modules/listgroup';
 
 const Listgroup = function (props:ListgroupProps) {
 

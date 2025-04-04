@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useEffect } from 'react';
-import { ui } from '../js/core/globals.js';
+import { ui } from '../js/core/globals';
 
 // utils
-import { HeaderStickyProps } from './utils/Models.ts';
+import { HeaderStickyProps } from './utils/Models';
 
 // assets
-import '../css/modules/header-sticky.css';
-import '../js/modules/header-sticky.js';
+import '../less/modules/header-sticky';
+import '../js/modules/header-sticky';
 
 export default function HeaderSticky(props:HeaderStickyProps) {
 
