@@ -161,12 +161,9 @@ import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 
-// shared assets
-import "../less/ui.less";
-import "../js/ui.js";
-
-// app
-import App from './App';
+// import nestws ui core files
+import "@nestws/ui/less/ui.less";
+import "@nestws/ui/js/ui.js";
 
 const root = createRoot(document.getElementById('app'));
 root.render(
@@ -175,6 +172,7 @@ root.render(
     </BrowserRouter>
 );
 ```
+### 7. Happy coding!
 
 ## By Nest Works Studio
 [nestws.com](https://www.nestws.com)
